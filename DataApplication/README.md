@@ -7,7 +7,9 @@ We provide the R codes to reproduce the application to U.S. precipitation extrem
 
 ### To fit the model
 
-- [main] Fit/FitUSprcp.R: fit our model to the U.S. precipitation extreme observations. The code runs on a single node in parallel across multiple cores. Includes an example usage and suggestions for extension to multiple nodes.
+- ```diff
+- [main]
+```Fit/FitUSprcp.R: fit our model to the U.S. precipitation extreme observations. The code runs on a single node in parallel across multiple cores. Includes an example usage and suggestions for extension to multiple nodes.
 - Fit/CensoredLocalLikelihood.R: auxiliary code that contains the censored local log-likelihood functions.
 - Fit/logCopula.R, Fit/logLikelihood.R, Fit/logPartial.R: auxiliary codes containing functions to compute the log copula for fully censored observations, the log-likelihood for non-censored observations, and the log partial derivatives of the copula for partially censored observations, respectively.
 - Fit/Tools.R: auxiliary functions.
