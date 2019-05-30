@@ -5,7 +5,7 @@
 We provide the R codes to reproduce the application to U.S. precipitation extremes. All results are obtained using R and the packages "mvtnorm", "R.utils", "fields", "numDeriv", "condMVNorm", "Matrix", "matrixcalc", "rje", "ismev", "evd", and "parallel", "homtest", "ggmap", "ggplot2", and "reshape2" all available on CRAN. Main codes (with example usage) are denoted by [main]. We also provide a docker image to run the example usage in each main code.
 
 
-*To fit the model*
+### To fit the model
 
 - [main] Fit/FitUSprcp.R: fit our model to the U.S. precipitation extreme observations. The code runs on a single node in parallel across multiple cores. Includes an example usage and suggestions for extension to multiple nodes.
 - Fit/CensoredLocalLikelihood.R: auxiliary code that contains the censored local log-likelihood functions.
@@ -20,14 +20,16 @@ We provide the R codes to reproduce the application to U.S. precipitation extrem
 
 
 
-*To estimate uncertainty via Bootstrap*
+### To estimate uncertainty via Bootstrap
 
 - Fit/Bootstrap/BlockBootstrap.R: generates block-bootstrap samples.
 - [main] Fit/Bootstrap/BFitUSprcp.R: fit our model to the U.S. precipitation extreme observations, for every block-Bootstrap sample b.
 
 
 
-*To generate figures* (Before running, introduce your api key in the <key> line to enable Google services in R. If using the docker image, then do Rscript Plot/EmpiricalQ.R "api_key<-'your_api_key'". Same for Plots/Chi.R and Plots/BoxplotsChisd.R.)
+### To generate figures 
+
+Before running, introduce your api key in the <key> line to enable Google services in R. If using the docker image, then do Rscript Plot/EmpiricalQ.R "api_key<-'your_api_key'". Same for Plots/Chi.R and Plots/BoxplotsChisd.R.
 
 - [main] Plots/EmpiricalQ.R: plot empirical quantiles of five day-cumulative winter precipitation data (Figure 6 in the paper).
 - [main] Plots/Chi.R: plot estimates of $\chi_h(u)$ (Figure 7 in the paper).
@@ -37,7 +39,7 @@ We provide the R codes to reproduce the application to U.S. precipitation extrem
 
 
 
-*To compute return periods (Table 3 in the paper)*
+### To compute return periods (Table 3 in the paper)
 
 - [main] ReturnPeriods/Parametric/ParametricReturnPeriods.R: Compute parametric return periods associated with catastrophic events over selected stations in 5 states. The return periods are computed over simulations from our model, and the code includes functions to simulate N replicates from our model and transformation to uniform margins.
 - [main] ReturnPeriods/Parametric/BootstrapParametricReturnPeriods.R: same as ReturnPeriods/Parametric/ParametricReturnPeriods.R, for every Bootstrap sample. Includes Bootstrap-based standard deviations for parametric return period estimates.
@@ -45,14 +47,14 @@ We provide the R codes to reproduce the application to U.S. precipitation extrem
 
 
 
-*To obtain neighbors for each grid point (no need to run, neighbors are already computed. Included here for reproducibility purposes)*
+### To obtain neighbors for each grid point (no need to run, neighbors are already computed. Included here for reproducibility purposes)
 
 - [main] Neighbors/NeighborhoodSelection.R: main code to generated a homogeneous neighborhood for each grid point.
 - Neighbors/myHtests.R Neighbors/HoTests.R: auxiliary functions.
 
 
 
-*To preprocess the data (no need to run, data are already preprocessed. Included here for reproducibility purposes)*
+### To preprocess the data (no need to run, data are already preprocessed. Included here for reproducibility purposes)
 
 - [main] PreProcessing/1_PreProcessing.R: Code to remove observations with quality flags (run this first)
 - [main] PreProcessing/2_5DaysCumRainfall.R: Code to put 5-days cumulative winter precipitation data in a N x n matrix (run this after PreProcessing/1_PreProcessing.R)
@@ -60,19 +62,10 @@ We provide the R codes to reproduce the application to U.S. precipitation extrem
 - Preprocessing/States: Folder where the processed data obtained when running PreProcessing/1_PreProcessing.R will be saved.
 
 
-*Docker image*
+###  Docker image
 We provide a docker image to run the example usage contained in each main code. For more info visit www.docker.com. The codes can be run, e.g., with:
 
-[To fit the model] docker run --rm -ti danitest:latest Rscript DataApplication/Fit/FitUSprcp.R
-[To estimate uncertainty via Bootstrap] docker run --rm -ti danitest:latest Rscript DataApplication/Fit/Bootstrap/BFitUSprcp.R
-[To generate block-bootstrap samples] docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ danitest:latest Rscript DataApplication/Fit/Bootstrap/BlockBootstrap.R
-[To generate figures] docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ danitest:latest Rscript DataApplication/Plots/EmpiricalQ.R "api_key<-'your_api_key'"
-[To generate figures] docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ danitest:latest Rscript DataApplication/Plots/Chi.R "api_key<-'your_api_key'"
-[To generate figures] docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ danitest:latest Rscript DataApplication/Plots/BoxplotsChisd.R "api_key<-'your_api_key'"
-[To compute return periods] docker run --rm -ti danitest:latest Rscript DataApplication/ReturnPeriods/Nonparametric/NonParamReturnPeriods.R
-[To obtain neighbors for each grid point. Takes time!] docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ danitest:latest Rscript DataApplication/Neighbors/NeighborhoodSelection.R
-[To preprocess the data. Please read the warning message!] docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ danitest:latest Rscript DataApplication/PreProcessing/1_PreProcessing.R
-[To preprocess the data. Please read the warning message!] docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ danitest:latest Rscript DataApplication/PreProcessing/2_5DaysCumRainfall.R
+
 
 
 
