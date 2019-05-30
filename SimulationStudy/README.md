@@ -22,10 +22,10 @@ We provide a docker image to run the example usage contained in each main code. 
 
 
 
-Daniela Castro-Camilo . 
-School of Mathematics and Statistics . 
-University of Glasgow . 
-Glasgow G12 8QQ . 
+Daniela Castro-Camilo<br/>
+School of Mathematics and Statistics<br/>
+University of Glasgow<br/>
+Glasgow G12 8QQ<br/>
 UK
 
 E-mail: daniela.castro.camilo@gmail.com
