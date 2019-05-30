@@ -2,7 +2,7 @@
 ## Daniela Castro-Camilo and Raphael Huser
 
 
-We provide the R codes to reproduce the simulation study. All results are obtained using R and the packages "mvtnorm", "fields", "numDeriv", "condMVNorm", "Matrix", "matrixcalc", "parallel", "plot3D", and "fda" all available on CRAN. Main codes (with example usage) are denoted by [main]. We also provide a docker image to run the example usage in each main code.
+We provide the R code needed to reproduce the simulation study. All results are obtained using R and the packages "mvtnorm", "fields", "numDeriv", "condMVNorm", "Matrix", "matrixcalc", "parallel", "plot3D", and "fda" all available on CRAN. Main code (with example usage) are denoted by [main]. We also provide a docker image to run the example usage in each main code.
 
 
 ### To fit the model
@@ -10,13 +10,13 @@ We provide the R codes to reproduce the simulation study. All results are obtain
 - [main] SimFit/SimFit.R: fit the model to the simulated data. The code runs on a single node in parallel across multiple cores. Includes an example usage and suggestions for extension to multiple nodes.
 - [main] SimFit/TablesFigures.R: Examples to reproduce Tables and Figure in the simulation study.
 - SimFit/CensoredLocalLikelihood.R: auxiliary code that contains the censored local log-likelihood functions.
-- SimFit/logCopula.R, SimFit/logLikelihood.R, SimFit/logPartial.R: auxiliary codes containing functions to compute the log copula for fully censored observations, the log-likelihood for non-censored observations, and the log partial derivatives of the copula for partially censored observations, respectively.
+- SimFit/logCopula.R, SimFit/logLikelihood.R, SimFit/logPartial.R: auxiliary code containing functions to compute the log copula for fully censored observations, the log-likelihood for non-censored observations, and the log partial derivatives of the copula for partially censored observations, respectively.
 - SimFit/Tools.R: auxiliary functions.
 
 
 
 ### Docker image
-We provide a docker image to run the example usage contained in each main code. For more info visit www.docker.com. The codes can be run, e.g., with:
+We provide a docker image to run the example usage contained in each main code. For more info visit www.docker.com. The code can be run, e.g., with:
 
 
 
