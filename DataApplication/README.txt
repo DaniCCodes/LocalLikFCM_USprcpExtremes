@@ -1,5 +1,5 @@
-Local likelihood estimation of complex tail dependence structures, applied to U.S. precipitation extremes
-Daniela Castro-Camilo and Raphael Huser
+# Local likelihood estimation of complex tail dependence structures, applied to U.S. precipitation extremes
+# Daniela Castro-Camilo and Raphael Huser
 
 
 We provide the R codes to reproduce the application to U.S. precipitation extremes. All results are obtained using R and the packages "mvtnorm", "R.utils", "fields", "numDeriv", "condMVNorm", "Matrix", "matrixcalc", "rje", "ismev", "evd", and "parallel", "homtest", "ggmap", "ggplot2", and "reshape2" all available on CRAN. Main codes (with example usage) are denoted by [main]. We also provide a docker image to run the example usage in each main code.
