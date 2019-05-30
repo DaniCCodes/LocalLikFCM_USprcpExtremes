@@ -2,14 +2,14 @@
 ## Daniela Castro-Camilo and Raphael Huser
 
 
-We provide the R codes to reproduce the application to U.S. precipitation extremes. All results are obtained using R and the packages "mvtnorm", "R.utils", "fields", "numDeriv", "condMVNorm", "Matrix", "matrixcalc", "rje", "ismev", "evd", and "parallel", "homtest", "ggmap", "ggplot2", and "reshape2" all available on CRAN. Main codes (with example usage) are denoted by [main]. We also provide a docker image to run the example usage in each main code.
+We provide the R code needed to reproduce the application to U.S. precipitation extremes. All results are obtained using R and the packages "mvtnorm", "R.utils", "fields", "numDeriv", "condMVNorm", "Matrix", "matrixcalc", "rje", "ismev", "evd", and "parallel", "homtest", "ggmap", "ggplot2", and "reshape2" all available on CRAN. Main code (with example usage) are denoted by [main]. We also provide a docker image to run the example usage in each main code.
 
 
 ### To fit the model
 
 - [main] Fit/FitUSprcp.R: fit our model to the U.S. precipitation extreme observations. The code runs on a single node in parallel across multiple cores. Includes an example usage and suggestions for extension to multiple nodes.
 - Fit/CensoredLocalLikelihood.R: auxiliary code that contains the censored local log-likelihood functions.
-- Fit/logCopula.R, Fit/logLikelihood.R, Fit/logPartial.R: auxiliary codes containing functions to compute the log copula for fully censored observations, the log-likelihood for non-censored observations, and the log partial derivatives of the copula for partially censored observations, respectively.
+- Fit/logCopula.R, Fit/logLikelihood.R, Fit/logPartial.R: auxiliary code containing functions to compute the log copula for fully censored observations, the log-likelihood for non-censored observations, and the log partial derivatives of the copula for partially censored observations, respectively.
 - Fit/Tools.R: auxiliary functions.
 
 - Data/grid60.txt: regular grid with 2235 grid points at an internodes distance of 60km, where the model will be fitted.
@@ -63,17 +63,17 @@ Before running, introduce your api key in the <key> line to enable Google servic
 
 
 ###  Docker image
-We provide a docker image to run the example usage contained in each main code. For more info visit www.docker.com. The codes can be run, e.g., with:
+We provide a docker image to run the example usage contained in each main code. For more info visit www.docker.com. The code can be run, e.g., with:
 
 
 
 
 
 
-Daniela Castro-Camilo
-School of Mathematics and Statistics
-University of Glasgow
-Glasgow G12 8QQ
+Daniela Castro-Camilo<br/>
+School of Mathematics and Statistics<br/>
+University of Glasgow<br/>
+Glasgow G12 8QQ<br/>
 UK
 
 E-mail: daniela.castro.camilo@gmail.com
