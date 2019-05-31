@@ -65,16 +65,16 @@ Before running, introduce your api key in the <key> line to enable Google servic
 ###  Docker image
 We provide a docker image to run the example usage contained in each main code. For more info visit https://cloud.docker.com/u/daniccodes/repository/docker/daniccodes/local_lik_fcm_usprcpextremes. The code can be run, e.g., with:
 
-[To fit the model] `docker run --rm -ti daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Fit/FitUSprcp.R`
-[To estimate uncertainty via Bootstrap] `docker run --rm -ti daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Fit/Bootstrap/BFitUSprcp.R`
-[To generate block-bootstrap samples] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Fit/Bootstrap/BlockBootstrap.R`
-[To generate figures] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Plots/EmpiricalQ.R "api_key<-'your_api_key'"`
-[To generate figures] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Plots/Chi.R "api_key<-'your_api_key'"`
-[To generate figures] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Plots/BoxplotsChisd.R "api_key<-'your_api_key'"`
-[To compute return periods] `docker run --rm -ti daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/ReturnPeriods/Nonparametric/NonParamReturnPeriods.R`
-[To obtain neighbors for each grid point. Takes time!] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Neighbors/NeighborhoodSelection.R`
-[To preprocess the data. Please read the warning message!] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/PreProcessing/1_PreProcessing.R`
-[To preprocess the data. Please read the warning message!] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/PreProcessing/2_5DaysCumRainfall.R`
+- [To fit the model] `docker run --rm -ti daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Fit/FitUSprcp.R`
+- [To estimate uncertainty via Bootstrap] `docker run --rm -ti daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Fit/Bootstrap/BFitUSprcp.R`
+- [To generate block-bootstrap samples] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Fit/Bootstrap/BlockBootstrap.R`
+- [To generate figures] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Plots/EmpiricalQ.R "api_key<-'your_api_key'"`
+- [To generate figures] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Plots/Chi.R "api_key<-'your_api_key'"`
+- [To generate figures] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Plots/BoxplotsChisd.R "api_key<-'your_api_key'"`
+- [To compute return periods] `docker run --rm -ti daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/ReturnPeriods/Nonparametric/NonParamReturnPeriods.R`
+- [To obtain neighbors for each grid point. Takes time!] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/Neighbors/NeighborhoodSelection.R`
+- [To preprocess the data. Please read the warning message!] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/PreProcessing/1_PreProcessing.R`
+- [To preprocess the data. Please read the warning message!] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ daniccodes/local_lik_fcm_usprcpextremes:latest Rscript DataApplication/PreProcessing/2_5DaysCumRainfall.R`
 
 
 
