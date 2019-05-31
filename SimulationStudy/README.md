@@ -16,8 +16,10 @@ We provide the R code needed to reproduce the simulation study. All results are 
 
 
 ### Docker image
-We provide a docker image to run the example usage contained in each main code. For more info visit www.docker.com. The code can be run, e.g., with:
+We provide a docker image to run the example usage contained in each main code. For more info visit https://cloud.docker.com/u/daniccodes/repository/docker/daniccodes/local_lik_fcm_usprcpextremes. The code can be run, e.g., with:
 
+[To fit the model] `docker run --rm -ti danitest:latest Rscript SimulationStudy/SimFit/SimFit.R`
+[To print tables and produce figures] `docker run --rm -ti -v $PWD/Results/:/llFCM/Results/ danitest:latest Rscript SimulationStudy/SimFit/TablesFigures.R`
 
 
 
